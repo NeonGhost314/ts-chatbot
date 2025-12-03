@@ -19,21 +19,24 @@ export interface Message {
 }
 
 export enum Intent {
-    Greeting = "greeting",
-    Goodbye = "goodbye",
-    Help = "help",
-    Query = "query",
-    Unknown = "unknown",
-    Smalltalk = "smalltalk",
-    Weather = "weather",
-    Search = "search"
+    Greeting = "Greeting",
+    Goodbye = "Goodbye",
+    Help = "Help",
+    Query = "Query",
+    Smalltalk = "Smalltalk",
+    Weather = "Weather",
+    Search = "Search",
+    Gratitude = "Gratitude",
+    Affirmative = "Affirmative",
+    Negative = "Negative",
+    Unknown = "Unknown",
 }
 
 // Generic function accepts a type <T> parametter allowing it to work with different data types
 export interface ClassifiedMessage<T extends Intent = Intent> extends Message {
     intent: T;
     confidence: number;
-    entities?: Record<string , any>;
+    entities?: Record<string, any>;
 }
 
 export type ConversationState = Map<
