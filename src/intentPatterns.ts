@@ -1,7 +1,7 @@
 import { Intent } from "./types.js";
 
 // Used Google Gemini to generate me a bigger Patter Table 
-export const intentPatterns: Record<Intent, string[]> = {
+export const IntentPatterns: Record<Intent, string[]> = {
   [Intent.Greeting]: [
     "hi", "hello", "hey", "good morning", "good evening", 
     "good afternoon", "yo", "greetings", "hi there", 
