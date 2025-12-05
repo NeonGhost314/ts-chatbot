@@ -47,7 +47,7 @@ function scoreIntent(normalizedText: string, intent: Intent): number {
  * @param message the message to classify
  * @returns the classified message with intent and confidence
  */
-function classifyMessage(message: Message): ClassifiedMessage {
+export function classifyMessage(message: Message): ClassifiedMessage {
     const normalizedText = normalize(message.text);
     
     let bestIntent = Intent.Unknown;

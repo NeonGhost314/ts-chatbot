@@ -40,6 +40,6 @@ export interface ClassifiedMessage<T extends Intent = Intent> extends Message {
 }
 
 export type ConversationState = Map<
-    string,
+    string,//represents user ID
     { lastIntent: Intent; context: Record<string, any> }
 >;
